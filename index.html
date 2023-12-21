@@ -1,0 +1,58 @@
+<!-- Hola sencei que esta leyendo este codigo, eh decidido hacer el css con ayuda de la erramienta tailwindcss, ya que considero que el objetivo de este modulo es practicar el js -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador de Cajero Automático</title>
+
+<!-- Script para estilos con la erramienta tailwindscss -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/forms"></script>
+</head>
+<body class="bg-gray-100">
+<div class="min-h-screen flex flex-col justify-center items-center">
+
+  <div id="loginForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div class="mb-4">
+      <h1 class="block text-gray-700 text-sm font-bold mb-2">Banco S. Z - Bienvenido</h1>
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+        Usuario
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Usuario">
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+        Contraseña
+      </label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="********">
+    </div>
+    <div class="flex items-center justify-between">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="login()">
+        Ingresar
+      </button>
+    </div>
+  </div>
+
+ 
+  <div id="actionButtons" class="hidden bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div class="mb-4">
+      <h2 class="block text-gray-700 text-sm font-bold mb-2">¿Qué desea hacer?</h2>
+    </div>
+    <div class="mb-6">
+      <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" onclick="checkBalance()">Consultar Saldo</button>
+      <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mr-2" onclick="deposit()">Ingresar Monto</button>
+      <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="withdraw()">Retirar Monto</button>
+    </div>
+    <div id="transactionResult" class="mt-4"></div>
+  </div>
+</div>
+
+
+<script src="./app.js"></script>
+
+</body>
+</html>
